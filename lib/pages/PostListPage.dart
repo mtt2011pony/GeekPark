@@ -106,7 +106,6 @@ class PostListPageState extends State<PostListPage> {
           list.addAll(listData);
           list.addAll(_listData['posts']);
           listData = list;
-//          print(listData);
 
         });
       }
