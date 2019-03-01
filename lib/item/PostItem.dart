@@ -3,10 +3,11 @@ import 'package:geek_park/pages/PostDetailPage.dart';
 
 class PostItemPage extends StatefulWidget {
   var itemData;
+  var title;
 
-  PostItemPage(var itemData) {
+  PostItemPage(var itemData, var title) {
     this.itemData = itemData;
-    print(itemData);
+    this.title = title;
   }
 
   @override
@@ -28,14 +29,15 @@ class PostItemPageState extends State<PostItemPage> {
   @override
   Widget build(BuildContext context) {
     var colum = widget.itemData['column'];
+    var columTitle = colum != null ? colum['title'] : widget.title;
+
     Row row1 = new Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         new Container(
           child: new Padding(
             padding: EdgeInsets.all(4.0),
-            child: new Text(
-              "综合报道", //colum['title']?colum['title']:
+            child: new Text(columTitle,
               style: new TextStyle(color: Colors.black87, fontSize: 10.0),
             ),
           ),

@@ -20,7 +20,7 @@ class PostListPage extends StatefulWidget {
 
 class PostListPageState extends State<PostListPage> {
   List listData = new List();
-  List<int> ids = new List();
+  List<int> ids = [251,251,177,81,250,85,12,179];
 
   var currentPage=1;
   var listTotalSize = 0;
@@ -34,14 +34,14 @@ class PostListPageState extends State<PostListPage> {
         getPost();
       }
     });
-    ids.add(251);
-    ids.add(251);//每日必读
-    ids.add(177);//顶楼
-    ids.add(81);//极客之选
-    ids.add(250);//极客出行
-    ids.add(85);//产品观察
-    ids.add(12);//极客现场
-    ids.add(179);//综合报道
+//    ids.add(251);
+//    ids.add(251);//每日必读
+//    ids.add(177);//顶楼
+//    ids.add(81);//极客之选
+//    ids.add(250);//极客出行
+//    ids.add(85);//产品观察
+//    ids.add(12);//极客现场
+//    ids.add(179);//综合报道
   }
 
   @override
@@ -81,7 +81,7 @@ class PostListPageState extends State<PostListPage> {
   }
 
   Widget buildItem(int i) {
-    return new PostItemPage(listData[i]);
+    return new PostItemPage(listData[i],widget.title);
   }
 
   Future<Null> _pullToRefresh() {

@@ -10,7 +10,7 @@ class ChannelPage extends StatefulWidget {
 
 class ChannelPageState extends State<ChannelPage> {
   List list = new List();
-  List titles = new List();
+  List titles = ["鹏友说","每日必读","顶楼","极客之选","极客出行","产品观察","极客现场","综合报道"];
 
   void _itemClick(index) async {
     await Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
@@ -24,14 +24,6 @@ class ChannelPageState extends State<ChannelPage> {
   @override
   void initState() {
     super.initState();
-    titles.add("鹏友说");
-    titles.add("每日必读");
-    titles.add("顶楼");
-    titles.add("极客之选");
-    titles.add("极客出行");
-    titles.add("产品观察");
-    titles.add("极客现场");
-    titles.add("综合报道");
   }
 
   @override

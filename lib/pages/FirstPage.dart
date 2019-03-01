@@ -92,7 +92,7 @@ class FindPageState extends State<FindPage> {
     }
     i -= 1;
     var itemData = listData[i];
-    return new PostItemPage(itemData['post']);
+    return new PostItemPage(itemData['post'],"");
   }
 
   Future<Null> _pullToRefresh() {
